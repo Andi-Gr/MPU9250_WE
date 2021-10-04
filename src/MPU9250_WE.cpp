@@ -107,10 +107,22 @@ void MPU9250_WE::autoOffsets(){
     
 }
 
+void MPU9250_WE::getAccOffsets(float &xOffset, float &yOffset, float &zOffset){
+    xOffset = accOffsetVal.x;
+    yOffset = accOffsetVal.y;
+    zOffset = accOffsetVal.z;
+}
+	
 void MPU9250_WE::setAccOffsets(float xMin, float xMax, float yMin, float yMax, float zMin, float zMax){
     accOffsetVal.x = (xMax + xMin) * 0.5;
     accOffsetVal.y = (yMax + yMin) * 0.5;
     accOffsetVal.z = (zMax + zMin) * 0.5;
+}
+
+void MPU9250_WE::setAccOffsets(float xOffset, float yOffset, float zOffset){
+    accOffsetVal.x = xOffset;
+    accOffsetVal.y = yOffset;
+    accOffsetVal.z = zOffset;
 }
 
 void MPU9250_WE::setGyrOffsets(float xOffset, float yOffset, float zOffset){
