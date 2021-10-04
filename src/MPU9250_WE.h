@@ -213,6 +213,7 @@ public:
     bool init();
     void autoOffsets();
 	void getAccOffsets(float &xOffset, float &yOffset, float &zOffset);
+	void getGyrOffsets(float &xOffset, float &yOffset, float &zOffset);
     void setAccOffsets(float xMin, float xMax, float yMin, float yMax, float zMin, float zMax);
 	void setAccOffsets(float xOffset, float yOffset, float zOffset);
     void setGyrOffsets(float xOffset, float yOffset, float zOffset);

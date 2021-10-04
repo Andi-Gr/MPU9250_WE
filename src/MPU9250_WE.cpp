@@ -112,6 +112,12 @@ void MPU9250_WE::getAccOffsets(float &xOffset, float &yOffset, float &zOffset){
     yOffset = accOffsetVal.y;
     zOffset = accOffsetVal.z;
 }
+
+void MPU9250_WE::getGyrOffsets(float &xOffset, float &yOffset, float &zOffset){
+    xOffset = gyrOffsetVal.x;
+    yOffset = gyrOffsetVal.y;
+    zOffset = gyrOffsetVal.z;
+}
 	
 void MPU9250_WE::setAccOffsets(float xMin, float xMax, float yMin, float yMax, float zMin, float zMax){
     accOffsetVal.x = (xMax + xMin) * 0.5;
